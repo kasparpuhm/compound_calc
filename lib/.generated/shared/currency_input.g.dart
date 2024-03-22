@@ -12,6 +12,7 @@ class CurrencyInput extends StatelessWidget {
     required this.title,
     this.initialValue,
     this.error,
+    this.onChanged,
   }) : super(key: key);
 
   final String title;
@@ -20,10 +21,13 @@ class CurrencyInput extends StatelessWidget {
 
   final String? error;
 
+  final void Function(String)? onChanged;
+
   @override
   Widget build(BuildContext _context) => currencyInput(
         title: title,
         initialValue: initialValue,
         error: error,
+        onChanged: onChanged,
       );
 }

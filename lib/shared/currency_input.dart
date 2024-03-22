@@ -8,7 +8,10 @@ const CURRENCY = (abbreviation: 'EUR', symbol: '€');
 
 @swidget
 Widget currencyInput(
-    {required String title, String? initialValue, String? error}) {
+    {required String title,
+    String? initialValue,
+    String? error,
+    void Function(String)? onChanged}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -21,6 +24,7 @@ Widget currencyInput(
       ),
       TextFormField(
         initialValue: initialValue,
+        onChanged: onChanged,
         decoration: InputDecoration(
           prefixIcon: Align(
             widthFactor: 1.0,
