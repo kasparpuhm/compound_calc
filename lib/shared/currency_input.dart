@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:tailwind_standards/tailwind_standards.dart';
 
@@ -25,6 +26,8 @@ Widget currencyInput(
       TextFormField(
         initialValue: initialValue,
         onChanged: onChanged,
+        keyboardType: TextInputType.number,
+        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
         decoration: InputDecoration(
           prefixIcon: Align(
             widthFactor: 1.0,
