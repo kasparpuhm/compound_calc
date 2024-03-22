@@ -39,6 +39,7 @@ Widget compoundInterestCalculator() {
         ),
         RadioInput(
           options: frequencyOptions,
+          title: 'Contribution frequency',
           initialValue: frequencyOptions[0].value,
           onChanged: (v) => print(v),
         ),

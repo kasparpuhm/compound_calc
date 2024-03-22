@@ -10,11 +10,14 @@ class RadioInput extends StatelessWidget {
   const RadioInput({
     Key? key,
     required this.options,
+    required this.title,
     required this.initialValue,
     required this.onChanged,
   }) : super(key: key);
 
   final List<RadioOption> options;
+
+  final String title;
 
   final dynamic initialValue;
 
@@ -23,6 +26,7 @@ class RadioInput extends StatelessWidget {
   @override
   Widget build(BuildContext _context) => radioInput(
         options: options,
+        title: title,
         initialValue: initialValue,
         onChanged: onChanged,
       );
