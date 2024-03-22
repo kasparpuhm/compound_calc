@@ -6,16 +6,23 @@ part '../../.generated/modules/interest-calculator/compound_interest_calculator.
 
 @swidget
 Widget compoundInterestCalculator() {
-  return const Padding(
-    padding: EdgeInsets.all(8.0),
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-          padding: EdgeInsets.only(bottom: 8.0),
-          child: CurrencyInput('Initial investment'),
+          padding: const EdgeInsets.only(bottom: 8.0),
+          child: CurrencyInput(
+            title: 'Initial investment',
+            initialValue: '5000',
+            error: 'hi',
+          ),
         ),
-        CurrencyInput('Contribution amount'),
+        const CurrencyInput(
+          title: 'Contribution amount',
+          initialValue: '500',
+        ),
       ],
     ),
   );
