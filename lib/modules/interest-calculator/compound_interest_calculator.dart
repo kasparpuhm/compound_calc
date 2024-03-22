@@ -23,8 +23,8 @@ Widget compoundInterestCalculator() {
 
   return Padding(
     padding: const EdgeInsets.all(8.0),
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+    child: Wrap(
+      runSpacing: 20.0,
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 8.0),
@@ -37,17 +37,17 @@ Widget compoundInterestCalculator() {
             );
           }),
         ),
+        RadioInput(
+          options: frequencyOptions,
+          initialValue: frequencyOptions[0].value,
+          onChanged: (v) => print(v),
+        ),
         const CurrencyInput(
           title: 'Contribution amount',
           initialValue: '500',
         ),
         const NumberInput(title: 'Years of growth'),
         const NumberInput(title: 'Estimated average return'),
-        RadioInput(
-          options: frequencyOptions,
-          initialValue: frequencyOptions[0].value,
-          onChanged: (v) => print(v),
-        )
       ],
     ),
   );
