@@ -1,4 +1,5 @@
 import 'package:compound_calc/shared/currency_input.dart';
+import 'package:compound_calc/shared/number_input.dart';
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:signals/signals_flutter.dart';
@@ -34,6 +35,8 @@ Widget compoundInterestCalculator() {
           title: 'Contribution amount',
           initialValue: '500',
         ),
+        const NumberInput(title: 'Years of growth'),
+        const NumberInput(title: 'Estimated average return')
       ],
     ),
   );

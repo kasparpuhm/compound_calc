@@ -31,28 +31,28 @@ Widget baseInput(
         keyboardType: keyboardType,
         inputFormatters: inputFormatters,
         decoration: InputDecoration(
-          prefixIcon: Align(
-            widthFactor: 1.0,
-            heightFactor: 1.0,
-            alignment: Alignment.center,
-            child: prefix != null
-                ? TText(
+          prefixIcon: prefix != null
+              ? Align(
+                  widthFactor: 1.0,
+                  heightFactor: 1.0,
+                  alignment: Alignment.center,
+                  child: TText(
                     prefix,
                     props: 'text-gray-500 text-sm',
-                  )
-                : null,
-          ),
-          suffixIcon: Align(
-            widthFactor: 1.0,
-            heightFactor: 1.0,
-            alignment: Alignment.center,
-            child: suffix != null
-                ? TText(
+                  ),
+                )
+              : null,
+          suffixIcon: suffix != null
+              ? Align(
+                  widthFactor: 1.0,
+                  heightFactor: 1.0,
+                  alignment: Alignment.center,
+                  child: TText(
                     suffix,
                     props: 'text-gray-500 text-sm',
-                  )
-                : null,
-          ),
+                  ),
+                )
+              : null,
           border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(6.0)),
           ),
@@ -75,7 +75,8 @@ Widget baseInput(
                   props: 'text-red-600 text-s',
                 )
               : null,
-          contentPadding: const EdgeInsets.symmetric(vertical: 6.0),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 6.0, horizontal: 12.0),
         ),
         style: TextStyle(color: TColor.gray900),
       ),
