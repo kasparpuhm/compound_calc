@@ -7,8 +7,13 @@ part of '../../shared/currency_input.dart';
 // **************************************************************************
 
 class CurrencyInput extends StatelessWidget {
-  const CurrencyInput({Key? key}) : super(key: key);
+  const CurrencyInput(
+    this.title, {
+    Key? key,
+  }) : super(key: key);
+
+  final String title;
 
   @override
-  Widget build(BuildContext _context) => currencyInput();
+  Widget build(BuildContext _context) => currencyInput(title);
 }

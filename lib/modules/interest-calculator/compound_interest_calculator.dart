@@ -13,9 +13,9 @@ Widget compoundInterestCalculator() {
       children: [
         Padding(
           padding: EdgeInsets.only(bottom: 8.0),
-          child: CurrencyInput(),
+          child: CurrencyInput('Initial investment'),
         ),
-        CurrencyInput(),
+        CurrencyInput('Contribution amount'),
       ],
     ),
   );
